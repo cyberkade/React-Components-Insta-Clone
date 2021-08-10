@@ -23,12 +23,14 @@ const App = () => {
   const likePost = postId => {
     setPostsState(posts.map( post => {
       if(postId === post.id){
-        post.likes ++;
+        post.likes += 1;
         return {...post};
       }else{
         return post
       }
     }))
+
+
     /*
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
 

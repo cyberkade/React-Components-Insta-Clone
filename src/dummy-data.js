@@ -54,6 +54,81 @@ const dummyData = [
             },
         ],
     },
+    {
+        id: 3,
+        username: "sippioko",
+        thumbnailUrl: 'https://picsum.photos/50/50?grayscale',
+        imageUrl: 'https://picsum.photos/id/237/300/200',
+        likes: 79,
+        timestamp: "July 17th 2021, 4:42 am",
+        comments: [
+            {
+                id: 42,
+                username: "sippioko",
+                text: "Rise and Shine! Rise and Grind!",
+            },
+            {
+                id: 43,
+                username: "tonytastic",
+                text: "A fellow early bird, I see!",
+            },
+            {
+                id: 44,
+                username: "smacced",
+                text: "Wat tf is wrong with u bro it wasn't even 5am yet",
+            },
+        ],
+    },
+    {
+        id: 4,
+        username: "OneAndOnly",
+        thumbnailUrl: 'https://picsum.photos/50/50',
+        imageUrl: 'https://picsum.photos/300/200?grayscale',
+        likes: 2032,
+        timestamp: "July 12th 2021, 4:52 pm",
+        comments: [
+            {
+                id: 52,
+                username: "OneAndOnly",
+                text: "I don't act hard, I'm a hard act to follow",
+            },
+            {
+                id: 53,
+                username: "biancasaurus",
+                text: "yb better lol",
+            },
+            {
+                id: 54,
+                username: "martinseludo",
+                text: "shut up lame",
+            },
+        ],
+    },
+    {
+        id: 5,
+        username: "farmer_Joe",
+        thumbnailUrl: 'https://picsum.photos/75/75?grayscale',
+        imageUrl: 'https://picsum.photos/300/200',
+        likes: 400,
+        timestamp: "July 14th 2021, 8:12 pm",
+        comments: [
+            {
+                id: 62,
+                username: "farmer_Joe",
+                text: "Life is great! Hope it is for you all as well :)",
+            },
+            {
+                id: 63,
+                username: "chimmycho-cho",
+                text: "Blessed!",
+            },
+            {
+                id: 64,
+                username: "DianaDaDonkey",
+                text: "Can't wait to see you!",
+            },
+        ],
+    },
 ];
 
 export default dummyData;

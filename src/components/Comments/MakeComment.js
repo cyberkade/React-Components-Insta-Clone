@@ -13,9 +13,8 @@ const MakeComment = (props) => {
 
     const commentPost = (event) => {
         event.preventDefault();
-        toggleComment();
         comments.push({id: comments[comments.length-1].id=1, username: 'Guest', text: inputValue})
-        
+        toggleComment();
         return comments;
     }
 

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import MakeComment from '../Comments/MakeComment'
 import Comments from '../Comments/Comments';
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
@@ -7,7 +8,7 @@ const Post = props => {
   // 🔥 Make sure the parent of Post is passing the right props!
   const { post, likePost } = props;
   const [isLiked, SetIsLikedState] = useState(false);
-
+  const [newCommentCount, setNewCommentCount] = useState(0);
   const dislikePost = postId => {
     if(postId === post.id){
         post.likes -= 1;
@@ -17,11 +18,13 @@ const Post = props => {
       }
     }
 
-    const toggle = () => {
+    const toggleLike = () => {
       console.log(isLiked)
       return SetIsLikedState(!isLiked)
     }
-
+    const toggleComment = () => {
+      return setNewCommentCount(newCommentCount + 1)
+    }
   return (
     <div className='post-border'>
       <PostHeader
@@ -36,9 +39,10 @@ const Post = props => {
         />
       </div>
       {/* Is LikeSection getting all the props it needs to work correctly? */}
-      <LikeSection numberOfLikes={post.likes} likePost={ () => likePost(post.id)} dislikePost={ () => dislikePost(post.id) } toggle={toggle} isLiked={isLiked} />
+      <LikeSection numberOfLikes={post.likes} likePost={ () => likePost(post.id)} dislikePost={ () => dislikePost(post.id) } toggleLike={toggleLike} isLiked={isLiked} />
       {/* Comments also wants its props! */}
       <Comments comments={post.comments}/>
+      <MakeComment toggleComment={toggleComment} comments={post.comments} />
     </div>
   );
 };

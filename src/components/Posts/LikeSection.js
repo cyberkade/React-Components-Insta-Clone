@@ -8,7 +8,7 @@ import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
-  const { likePost, numberOfLikes, dislikePost, isLiked, toggle } = props;
+  const { likePost, numberOfLikes, dislikePost, isLiked, toggleLike } = props;
   
   return (
     <div>
@@ -19,11 +19,11 @@ const LikeSection = props => {
         <div className='like-section-wrapper'>
           <FontAwesomeIcon onClick={ () => {
             if(isLiked){
-            toggle() 
-            dislikePost()
+              toggleLike() 
+              dislikePost()
             } else{
-            toggle() 
-            likePost()
+              toggleLike() 
+              likePost()
             }
           }} 
               icon={faHeart} />
